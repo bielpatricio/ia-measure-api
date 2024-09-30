@@ -1,0 +1,96 @@
+{
+  "info": {
+    "name": "Leitura de Consumo API",
+    "description": "Coleção de endpoints para o serviço de leitura de consumo de água e gás.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Leitura",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"image\": \"<INSIRA_BASE64_AQUI>\",\n  \"customer_code\": \"123456\",\n  \"measure_datetime\": \"2024-08-28T00:00:00.000Z\",\n  \"measure_type\": \"WATER\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/measurer-photo/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "measurer-photo",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirmar Leitura",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"measure_uuid\": \"<INSIRA_MEASURE_UUID_AQUI>\",\n  \"confirmed_value\": 150\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/measurer-photo/confirm",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "measurer-photo",
+            "confirm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Leituras",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/measurer-photo/123456/list?measure_type=WATER",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "measurer-photo",
+            "123456",
+            "list"
+          ],
+          "query": [
+            {
+              "key": "measure_type",
+              "value": "WATER"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
