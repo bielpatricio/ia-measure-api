@@ -1,6 +1,6 @@
 # 📊 AI Measure Register 
 
-Bem-vindo ao projeto **AI Measure Register**! Este é um serviço desenvolvido com NestJS para leitura de medidores (potencialmente de água, energia, etc.), facilitando o monitoramento e a gestão de consumo.
+Este é um serviço desenvolvido com NestJS para leitura de medidores (potencialmente de água, energia, etc.), facilitando o monitoramento e a gestão de consumo.
 
 ## 📦 Estrutura do Projeto
 
@@ -34,8 +34,8 @@ ai-meter-reader/
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/biamesquitap/ai-measure-register-api.git
-   cd ia-measure-register-api
+   git clone https://github.com/bielpatricio/ia-measure-api
+   cd ia-measure-api
    ```
 
 2. **Instale as dependências:**
