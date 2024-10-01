@@ -133,9 +133,11 @@ Para rodar os testes unitários:
 
 ```bash
 yarn test
+```
 
 ```bash
 npm run test
+```
 
 ## 📘 Endpoints
 
